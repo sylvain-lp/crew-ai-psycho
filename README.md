@@ -4,12 +4,13 @@
 
 This is a very simple CREW AI example, using Crew AI "create" to initiate a Project structure out of the box.
 - The example is using a local "ollama" LLM, running on http://localhost:11434.
-- No need for any LLM subscription, no OPENAI_API_TOKEN needed or token.
+- No need for any LLM subscription, no OPENAI_API_TOKEN needed.
 - Project runs well on a Macbook Pro M, with "ollama/llama3.2:latest" LLM.
 
-* Scenario *
-An AI Agents is a patient dealing with anxiety and has decided to engage in a therapy with a very helpful psychoanalyst.
-Watch their session as they try to identify the cause of this condition and decide to cope with it :-)
+**Scenario**
+
+An AI Agent is dealing with anxiety and has decided to engage in therapy sessions with a very helpful psychoanalyst.
+Watch their sessions as they try to identify the cause of this condition and decide to cope with it :-)
 
 ### 1. Install Python & Virtual Env (using "uv")
 `source:` https://docs.crewai.com/en/installation
