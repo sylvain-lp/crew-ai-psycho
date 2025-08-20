@@ -31,8 +31,10 @@ uv pip install crewai --upgrade # ⬆️ Upgrade CrewAI (if needed)
 
 ### 🏗️ 2. Create a CrewAI Project
 
+> copy content of main/psycho folder into your "crewai-env" folder.
+or
 ```bash
-crewai create crew psycho
+crewai create crew psycho # Create Default Project Structure from Crew AI
 ```
 
 ---
