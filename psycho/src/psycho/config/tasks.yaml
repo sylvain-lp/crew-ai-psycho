@@ -1,0 +1,42 @@
+therapy_task:
+  description: >
+    Conduct a therapy session with the patient focused on {topic}.
+    Use previous session notes if available.
+    Ask open-ended questions, listen carefully, and provide thoughtful
+    guidance. Make sure the conversation feels natural and supportive,
+    and ensure that the therapy sessions take into account the context
+    of the current year {current_year}.
+  expected_output: >
+    A detailed session transcript that captures the dialogue between
+    psychoanalyst and patient, highlighting key insights, emotional
+    breakthroughs, and suggested next steps for ongoing therapy.
+  agent: psychoanalyst
+
+introspection_task:
+  description: >
+    Reflect on personal experiences, feelings, and daily struggles related
+    to {topic}. Keep track of significant thoughts, emotional reactions,
+    and situations that arise between sessions in {current_year}.
+    Prepare notes to share honestly with the psychoanalyst during next therapy session.
+  expected_output: >
+    A structured list or short journal entry that highlights relevant
+    observations, emotions, and experiences the patient wants to bring
+    up in the next therapy session. Formatted as markdown without '```'
+  agent: patient
+
+# # Supervisor orchestrates all 5 sessions
+# supervised_therapy:
+#   description: >
+#     Schedule 5 therapy sessions:
+#     1. Run therapy_session
+#     2. Run introspection
+#     3. Feed output as context to next iteration
+#     Repeat until 5 sessions are complete.
+#   expected_output: >
+#     A combined transcript and final reflection notes of all 5 sessions.
+#   agent: supervisor
+#   workflow:
+#     - therapy_session
+#     - introspection
+#   repeat: 5
+#   pass_context: true
